@@ -43,15 +43,26 @@ class ConversionViewController: UIViewController {
     //anytime fahrenheit value changes, need to update the celsius value
     func updateCelsiusLabel() {
         if let value = celsiusValue {
-            celsiusLabel.text = "\(value)"
+            celsiusLabel.text = numberFormatter.string(from: NSNumber(value: value))
+            
         } else {
             celsiusLabel.text = "???"
         }
     }
+ 
     
     //this will dismiss keyboard
     @IBAction func dissmissKeyboard(sender: AnyObject) {
         textField.resignFirstResponder()
     }
+    
+    //number formatter
+    let numberFormatter: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.numberStyle = .decimal
+        nf.minimumFractionDigits = 0
+        nf.maximumFractionDigits = 1
+        return nf
+    }()
 }
 
