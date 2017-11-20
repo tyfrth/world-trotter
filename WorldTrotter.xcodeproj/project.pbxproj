@@ -12,6 +12,7 @@
 		CC0272481FB0D3D500E62B14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC0272471FB0D3D500E62B14 /* Assets.xcassets */; };
 		CC02724B1FB0D3D500E62B14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0272491FB0D3D500E62B14 /* LaunchScreen.storyboard */; };
 		CC3C8DF61FBD0F6C00003882 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C8DF51FBD0F6C00003882 /* ConversionViewController.swift */; };
+		CC3C8DF91FBFA65600003882 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3C8DF81FBFA65600003882 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CC02724A1FB0D3D500E62B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC02724C1FB0D3D500E62B14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC3C8DF51FBD0F6C00003882 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
+		CC3C8DF81FBFA65600003882 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC3C8DF91FBFA65600003882 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				CC02723F1FB0D3D500E62B14 /* WorldTrotter */,
 				CC02723E1FB0D3D500E62B14 /* Products */,
+				CC3C8DF71FBFA65500003882 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				CC02724C1FB0D3D500E62B14 /* Info.plist */,
 			);
 			path = WorldTrotter;
+			sourceTree = "<group>";
+		};
+		CC3C8DF71FBFA65500003882 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC3C8DF81FBFA65600003882 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
