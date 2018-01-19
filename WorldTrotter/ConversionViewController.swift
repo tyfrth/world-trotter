@@ -9,11 +9,51 @@
 //import Foundation
 import UIKit
 
+//get only the our
+extension Date {
+    var hour: Int { return Calendar.current.component(.hour, from: self)}
+}
+
 class ConversionViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
     
+    override func viewDidLoad() {
+        //always call the super implementation of the of viewDidLoad
+        super.viewDidLoad()
+        
+        
+        
+        print("ConversionController loaded it's view :)")
+        
+}
+    
+    //Timer Stuff to change background color
+    
+    var timer = Timer()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(scheduleTimer), name: .UIApplicationDidBecomeActive, object: nil)
+        
+        //change background each time view is opened
+        changeBackground()
+    }
+    
+    @objc func scheduleTimer() {
+        //schedule the timer
+        timer = Timer(fireAt: Calendar.current.nextDate(after: Date(), matching: DateComponents(hour: 6..<17  ~= Date().hour ? 17 : 6), matchingPolicy: .nextTime)!, interval: 0, target: self, selector: #selector(changeBackground), userInfo: nil, repeats: false)
+        print(timer.fireDate)
+        RunLoop.main.add(timer, forMode: .commonModes)
+        print("new background change scheduled at:", timer.fireDate.description(with: .current))
+    }
+    
+    @objc func changeBackground() {
+    
+        //check if day or night
+        self.view.backgroundColor = 6..<17 ~= Date().hour ? .white : .black
+    }
     //this is an optional b/c it could be nil -- we then create a property observer using {} as soon as the value is changed we call updateCelsiusLabel()
     var fahrenheitValue: Double? {
         didSet{
