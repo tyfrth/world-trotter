@@ -29,7 +29,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         
 }
     
-    //Timer Stuff to change background color
+// MARK: Timer Stuff to change background color
     
     var timer = Timer()
     
@@ -54,6 +54,8 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         //check if day or night
         self.view.backgroundColor = 6..<17 ~= Date().hour ? .white : .black
     }
+    
+    
     //this is an optional b/c it could be nil -- we then create a property observer using {} as soon as the value is changed we call updateCelsiusLabel()
     var fahrenheitValue: Double? {
         didSet{
