@@ -14,6 +14,7 @@
 		CC3C8DF61FBD0F6C00003882 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C8DF51FBD0F6C00003882 /* ConversionViewController.swift */; };
 		CC3C8DF91FBFA65600003882 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3C8DF81FBFA65600003882 /* MapKit.framework */; };
 		CC6C9B7920083FB400489F7B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6C9B7820083FB400489F7B /* MapViewController.swift */; };
+		D2E5C11120D9B715005071A4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E5C11020D9B715005071A4 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CC3C8DF51FBD0F6C00003882 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		CC3C8DF81FBFA65600003882 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CC6C9B7820083FB400489F7B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D2E5C11020D9B715005071A4 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				CC0272401FB0D3D500E62B14 /* AppDelegate.swift */,
+				D2E5C11020D9B715005071A4 /* WebViewController.swift */,
 				CC3C8DF51FBD0F6C00003882 /* ConversionViewController.swift */,
 				CC6C9B7820083FB400489F7B /* MapViewController.swift */,
 				CC0272441FB0D3D500E62B14 /* Main.storyboard */,
@@ -154,6 +157,7 @@
 				CC3C8DF61FBD0F6C00003882 /* ConversionViewController.swift in Sources */,
 				CC6C9B7920083FB400489F7B /* MapViewController.swift in Sources */,
 				CC0272411FB0D3D500E62B14 /* AppDelegate.swift in Sources */,
+				D2E5C11120D9B715005071A4 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

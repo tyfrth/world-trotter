@@ -90,13 +90,43 @@
             </objects>
             <point key="canvasLocation" x="-140" y="134"/>
         </scene>
+        <!--Web-->
+        <scene sceneID="Lcx-te-tlz">
+            <objects>
+                <viewController id="Dcu-Df-m6V" customClass="WebViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fbx-qX-SGL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dku-pb-OEp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5w6-SO-2cv"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Web" image="icon-web" id="XQI-au-eVP"/>
+                    <connections>
+                        <outlet property="webView" destination="Dku-pb-OEp" id="KLS-re-zOu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8jN-Xr-wtB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="542" y="134"/>
+        </scene>
         <!--Map-->
         <scene sceneID="51z-hC-3fF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ToP-4X-k38" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="1Q6-0b-0yi" customClass="MapViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="MapIcon" id="7NK-y5-cLD"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ToP-4X-k38" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1196" y="134"/>
         </scene>
@@ -113,6 +143,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="OQY-X5-GQQ"/>
                         <segue destination="1Q6-0b-0yi" kind="relationship" relationship="viewControllers" id="LLP-6k-5kT"/>
+                        <segue destination="Dcu-Df-m6V" kind="relationship" relationship="viewControllers" id="YXZ-Qj-TEL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUR-lY-fz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -123,5 +154,6 @@
     <resources>
         <image name="ConvertIcon" width="48" height="32"/>
         <image name="MapIcon" width="48" height="32"/>
+        <image name="icon-web" width="25" height="25"/>
     </resources>
 </document>
